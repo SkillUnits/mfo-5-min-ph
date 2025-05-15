@@ -2,9 +2,9 @@ $(document).ready(function (){
     $('#phone-main').mask("+7 (000) 000-00-00", {placeholder: "+7 (xxx) xxx-xx-xx"});
 
     $('#summ_slider').ionRangeSlider({
-        min: 10000,
-        max: 500000,
-        from: 75000,
+        min: 5000,
+        max: 50000,
+        from: 10000,
         step: 500,
         hide_min_max: true,
         hide_from_to: true,
@@ -86,7 +86,7 @@ $(document).ready(function (){
         let getMoney = parseInt(money) + percent;
         let getMoneySale = parseInt(money) + percentSale;
 
-        $('.days-current').html(days + '<span> дней</span>');
+        $('.days-current').html(days + '<span> days</span>');
 
         let moneyTake = Math.round(money).toLocaleString('en-US');
         moneyTake = moneyTake.replace(/,/g, " ");
