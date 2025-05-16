@@ -34,9 +34,9 @@ class Action {
 const haveCreditsFlow = new Flow([
     new OperMessage("Select the companies where you had loans:", null, new Action(Action.showCurrentOffers, null)),
     new OperMessage("What amount would you like to receive?", [
-        new Answer("Up to 100,000 PHP", null, "amount_select_100"),
-        new Answer("100,000 - 300,000 PHP", null, "amount_select_100-300"),
-        new Answer("More than 300,000 PHP 💰", null, "amount_select_300+"),
+        new Answer("Up to 5,000 PHP", null, "amount_select_100"),
+        new Answer("5,000 - 50,000 PHP", null, "amount_select_100-300"),
+        new Answer("More than 50,000 PHP 💰", null, "amount_select_300+"),
     ], null),
     new OperMessage("Great! I am performing automatic verification", null, null),
     new OperMessage("🎉🎁💰 Your requested loan is pre-approved. It can be obtained from these organizations:", null, new Action(Action.showOffers, null))
@@ -44,9 +44,9 @@ const haveCreditsFlow = new Flow([
 
 const noCreditsFlow = new Flow([
     new OperMessage("What amount would you like to receive?", [
-        new Answer("Up to 100,000 PHP", null, "amount_select_100"),
-        new Answer("100,000 - 300,000 PHP", null, "amount_select_100-300"),
-        new Answer("More than 300,000 PHP 💰", null, "amount_select_300+"),
+        new Answer("Up to 5,000 PHP", null, "amount_select_100"),
+        new Answer("5,000 - 50,000 PHP", null, "amount_select_100-300"),
+        new Answer("More than 50,000 PHP 💰", null, "amount_select_300+"),
     ], null),
     new OperMessage("Great! I am performing automatic verification", null, null),
     new OperMessage("🎉🎁💰 Your requested loan is pre-approved. It can be obtained from these organizations:", null, new Action(Action.showOffers, null))
@@ -55,7 +55,7 @@ const noCreditsFlow = new Flow([
 // Flows
 const mainFlow = new Flow([
     new OperMessage("Good afternoon 👋", null, null),
-    new OperMessage("My name is Aruzhan, I will find the best microloan offer for you.", null, null),
+    new OperMessage("My name is Jacob, I will find the best microloan offer for you.", null, null),
     new OperMessage("Have you ever had microloans?", [
         new Answer("Yes", new Action(Action.actionChangeFlow, haveCreditsFlow), "have_credits"),
         new Answer("No", new Action(Action.actionChangeFlow, noCreditsFlow), "no_credits"),

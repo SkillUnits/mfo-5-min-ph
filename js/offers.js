@@ -11,21 +11,12 @@ const moneySymbols = ["💵", "💰", "💸", "💳", "💶", "💷"];
 
 // Динамически загружаем только те оферы, которые есть в массиве offerIdsArray
 const offersData = {
-    10: new Offer(logo="/images/banks/zaimer.png", url="{offer}&offer_id=10", duration="12 months", interest="0.1%"),
-    12: new Offer(logo="/images/banks/moneymankz.svg", url="{offer}&offer_id=12", duration="30 days", interest="0.01%"),
-    13: new Offer(logo="/images/banks/onecreditkz.svg", url="{offer}&offer_id=13", duration="20 days", interest="0.01%"),
-    14: new Offer(logo="/images/banks/credity360.png", url="{offer}&offer_id=14", duration="30 days", interest="0.01%"),
-    15: new Offer(logo="/images/banks/creditbarkz.svg", url="{offer}&offer_id=15", duration="30 days", interest="0.1%"),
-    16: new Offer(logo="/images/banks/creditpluskz.svg", url="{offer}&offer_id=16", duration="30 days", interest="0.1%"),
-    20: new Offer(logo="/images/banks/acreditkz.png", url="{offer}&offer_id=20", duration="25 days", interest="0.01%"),
-    23: new Offer(logo="/images/banks/turbomoneykz.png", url="{offer}&offer_id=23", duration="20 days", interest="0.1%"),
-    24: new Offer(logo="/images/banks/gmoneykz.svg", url="{offer}&offer_id=24", duration="20 days", interest="0.29%"),
-
-    21: new Offer(logo="/images/banks/finlitekz.svg", url="{offer}&offer_id=21", duration="30 days", interest="0.01%"),
-    22: new Offer(logo="/images/banks/cashradarkz.svg", url="{offer}&offer_id=22", duration="30 days", interest="0.01%"),
-    25: new Offer(logo="/images/banks/easycashkz.svg", url="{offer}&offer_id=25", duration="60 days", interest="0.1%"),
-    26: new Offer(logo="/images/banks/excashkz.svg", url="{offer}&offer_id=26", duration="180 days", interest="0.1%"),
-    27: new Offer(logo="/images/banks/fincashkz.svg", url="{offer}&offer_id=27", duration="180 days", interest="0.1%"),
+    72: new Offer(logo="/images/banks/Loanonline.svg", url="{offer}&offer_id=72", sa="25000 P", interest="0.1%"),
+    73: new Offer(logo="/images/banks/finbro.svg", url="{offer}&offer_id=73", sa="50000 P", interest="0.01%"),
+    74: new Offer(logo="/images/banks/Cash-Express.png.svg", url="{offer}&offer_id=74", sa="20000 P", interest="1%"),
+    75: new Offer(logo="/images/banks/Kviku.svg", url="{offer}&offer_id=75", sa="25000 P", interest="0.01%"),
+    76: new Offer(logo="/images/banks/moneycat.svg", url="{offer}&offer_id=76", sa="25000 P", interest="0.1%"),
+    77: new Offer(logo="/images/banks/digido_2.png.svg", url="{offer}&offer_id=77", sa="25000 P", interest="0.1%"),
 };
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -33,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     var offersIds = urlParams.get("offers_ids");  // например, "zaimerkz,moneymankz,onecreditkz"
     if (!offersIds) {
-        offersIds="13 21 22 20 10 12 14 16";
+        offersIds="72 73 74 75 76 77";
     }
 
     const offerIdsArray = offersIds.split(' ');
