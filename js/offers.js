@@ -16,9 +16,10 @@ const offersData = {
     74: new Offer(logo="/images/banks/Cash-Express.png.svg", url="{offer}&offer_id=74", sa="20000 PHP", interest="1%"),
     75: new Offer(logo="/images/banks/Kviku.svg", url="{offer}&offer_id=75", sa="25000 PHP", interest="0.01%"),
     76: new Offer(logo="/images/banks/moneycat.svg", url="{offer}&offer_id=76", sa="25000 PHP", interest="0.1%"),
-    77: new Offer(logo="/images/banks/digido_2.png.svg", url="{offer}&offer_id=77", sa="25000 PHP", interest="0.1%"),
+    // 77: new Offer(logo="/images/banks/digido_2.png.svg", url="{offer}&offer_id=77", sa="25000 PHP", interest="0.1%"),
     83: new Offer(logo="/images/banks/binixo.svg", url="{offer}&offer_id=83", sa="25000 PHP", interest="0.1%"),
     84: new Offer(logo="/images/banks/mazilla.svg", url="{offer}&offer_id=84", sa="30000 PHP", interest="0.1%"),
+    85: new Offer(logo="/images/banks/pesoredee.svg", url="{offer}&offer_id=85", sa="20000 PHP", interest="0.1%"),
 };
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     var offersIds = urlParams.get("offers_ids");  // например, "zaimerkz,moneymankz,onecreditkz"
     if (!offersIds) {
-        offersIds="72 73 74 75 76 77 83 84";
+        offersIds="72 73 74 75 76 83 84 85";
     }
 
     const offerIdsArray = offersIds.split(' ');
